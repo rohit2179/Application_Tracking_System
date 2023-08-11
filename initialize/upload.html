@@ -1,0 +1,17 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>mim</title>title>
+    </head>
+    <body>
+        <!-- Upload form. Note enctype attribute!-->
+        <form action ="{% url 'candidate'%}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>
+                {{ form.file }}
+            </p>
+            <p><input type="submit" value="Upload"/></p>
+        </form>
+    </body>
+</html>
